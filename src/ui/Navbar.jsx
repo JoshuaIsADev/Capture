@@ -1,32 +1,24 @@
 import styled from 'styled-components';
-import Button from './Button';
 
-const StyledNavBar = styled.nav`
-  display: flex;
-  justify-content: space-between;
-`;
-
-const StyledUl = styled.ul`
+const StyledNavBar = styled.ul`
   display: flex;
   flex-direction: row;
+  justify-content: left;
+  width: 100%;
   gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
 `;
 
 function NavBar() {
   return (
-    <StyledNavBar>
-      <StyledUl>
-        <li>
-          <Button>Collections</Button>
-        </li>
-        <li>
-          <Button>+</Button>
-        </li>
-        <li>
-          <Button>Sign In</Button>
-        </li>
-      </StyledUl>
-    </StyledNavBar>
+    <>
+      <StyledNavBar>
+        <li>View</li>
+        <li>Sort</li>
+        <li>Search</li>
+      </StyledNavBar>
+    </>
   );
 }
 

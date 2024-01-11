@@ -31,7 +31,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--color-gray-900)
 }
 
@@ -54,7 +54,7 @@ ul li,
 h4,
 a {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
