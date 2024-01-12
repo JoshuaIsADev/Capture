@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from './Button';
 
 const StyledNavBar = styled.ul`
   display: flex;
@@ -14,9 +15,15 @@ function NavBar() {
   return (
     <>
       <StyledNavBar>
-        <li>View</li>
-        <li>Sort</li>
-        <li>Search</li>
+        <li>
+          <Button>View</Button>
+        </li>
+        <li>
+          <Button>Sort</Button>
+        </li>
+        <li>
+          <input type='input' placeholder='Search'></input>
+        </li>
       </StyledNavBar>
     </>
   );
