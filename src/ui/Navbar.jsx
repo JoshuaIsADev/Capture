@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 const StyledNavBar = styled.ul`
@@ -8,15 +9,14 @@ const StyledNavBar = styled.ul`
   width: 100%;
   gap: 3rem;
   align-items: center;
-  padding: 3rem 0;
 `;
 
-function NavBar() {
+function NavBar({ handleButtonClick }) {
   return (
     <>
       <StyledNavBar>
         <li>
-          <Button>View</Button>
+          <Button onClick={handleButtonClick}>View</Button>
         </li>
         <li>
           <Button>Sort</Button>
@@ -28,5 +28,9 @@ function NavBar() {
     </>
   );
 }
+
+NavBar.propTypes = {
+  handleButtonClick: PropTypes.func.isRequired,
+};
 
 export default NavBar;

@@ -6,6 +6,7 @@ import Share from './pages/Share';
 import PageNotFound from './pages/PageNotFound';
 
 import GlobalStyles from './styles/GlobalStyles';
+import AppLayout from './ui/AppLayout';
 // import Header from './ui/header';
 
 function App() {
@@ -15,11 +16,13 @@ function App() {
       {/* <Header /> */}
       <BrowserRouter>
         <Routes>
-          <Route index element={<Navigate replace to='album' />} />
-          <Route path='album' element={<Album />} />
-          <Route path='account' element={<Account />} />
-          <Route path='login' element={<Login />} />
-          <Route path='share' element={<Share />} />
+          <Route element={<AppLayout />}>
+            <Route index element={<Navigate replace to='album' />} />
+            <Route path='album' element={<Album />} />
+            <Route path='account' element={<Account />} />
+            <Route path='login' element={<Login />} />
+            <Route path='share' element={<Share />} />
+          </Route>
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

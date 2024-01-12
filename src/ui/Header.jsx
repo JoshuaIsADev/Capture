@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import HeaderNav from './HeaderNav';
-import NavBar from './Navbar';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -20,7 +19,6 @@ function Header() {
     <>
       <StyledHeader>
         <HeaderNav />
-        <NavBar />
       </StyledHeader>
     </>
   );
