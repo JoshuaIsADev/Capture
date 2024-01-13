@@ -24,7 +24,7 @@ function HeaderNav() {
           <StyledNavLink to='/album'>Album</StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/share'>
+          <StyledNavLink to='/share' $variation='add'>
             <IconContext.Provider value={{ size: '1.5rem' }}>
               <SlPlus />
             </IconContext.Provider>

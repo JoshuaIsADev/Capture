@@ -31,7 +31,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-gray-900)
 }
 
@@ -39,6 +39,7 @@ body {
   font-family: 'Inter Tight', sans-serif;
   background-color: var(--background-color);
   letter-spacing: .05rem;
+
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,13 +49,6 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-
-ul li,
-h4{
-  font-size: 1rem;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 li {
@@ -84,7 +78,7 @@ h3 {
 
 p {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   line-height:1rem;
 }
@@ -132,7 +126,7 @@ img {
     font-size: 12px;
   }
 } */
-@media (max-width: 1100px) {
+/* @media (max-width: 1100px) {
   *,
   *::before,
   *::after {
@@ -159,7 +153,7 @@ img {
   padding: .25rem;
   margin: 10rem 0 0rem;
 }
-}
+} */
 
 //OVERRIDES
 .faded {
