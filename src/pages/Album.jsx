@@ -1,12 +1,13 @@
 import styled from 'styled-components';
-import NavBar from '../ui/Navbar';
 import { useState } from 'react';
+import AlbumNav from '../ui/AlbumNav';
 
 const StyledAlbum = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.columns}, 1fr)`};
   grid-template-rows: auto;
   width: 100%;
+  gap: 2rem;
 `;
 
 function Album() {
@@ -23,7 +24,7 @@ function Album() {
   ).matches;
 
   const isQhd = window.matchMedia(
-    'only screen and (min-width: 2560px)'
+    'only screen and (min-width: 2500px)'
   ).matches;
 
   const [columns, setColumns] = useState(
@@ -52,7 +53,7 @@ function Album() {
 
   return (
     <>
-      <NavBar handleButtonClick={handleButtonClick} />
+      <AlbumNav handleButtonClick={handleButtonClick} />
       <StyledAlbum columns={columns}>
         <div>Album</div>
         <div>Album</div>

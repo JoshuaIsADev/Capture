@@ -1,12 +1,14 @@
 import styled from 'styled-components';
-import Button from './Button';
+import StyledNavLink from './StyledNavLink';
+import { SlPlus } from 'react-icons/sl';
+import { IconContext } from 'react-icons';
 
 const StyledHeaderNav = styled.nav`
   display: flex;
   justify-content: space-between;
 `;
 
-const StyledNav = styled.ul`
+const NavList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 3rem;
@@ -16,18 +18,22 @@ const StyledNav = styled.ul`
 function HeaderNav() {
   return (
     <StyledHeaderNav>
-      Capture
-      <StyledNav>
+      <h3>Capture</h3>
+      <NavList>
         <li>
-          <Button>Albums</Button>
+          <StyledNavLink to='/album'>Album</StyledNavLink>
         </li>
         <li>
-          <Button $variation='add'>+</Button>
+          <StyledNavLink to='/share'>
+            <IconContext.Provider value={{ size: '1.5rem' }}>
+              <SlPlus />
+            </IconContext.Provider>
+          </StyledNavLink>
         </li>
         <li>
-          <Button>Sign In</Button>
+          <StyledNavLink to='/login'>Sign In</StyledNavLink>
         </li>
-      </StyledNav>
+      </NavList>
     </StyledHeaderNav>
   );
 }

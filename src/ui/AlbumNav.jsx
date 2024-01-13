@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-const StyledNavBar = styled.ul`
+const NavList = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -11,10 +11,10 @@ const StyledNavBar = styled.ul`
   align-items: center;
 `;
 
-function NavBar({ handleButtonClick }) {
+function AlbumNav({ handleButtonClick }) {
   return (
-    <>
-      <StyledNavBar>
+    <nav>
+      <NavList>
         <li>
           <Button onClick={handleButtonClick}>View</Button>
         </li>
@@ -24,13 +24,13 @@ function NavBar({ handleButtonClick }) {
         <li>
           <input type='input' placeholder='Search'></input>
         </li>
-      </StyledNavBar>
-    </>
+      </NavList>
+    </nav>
   );
 }
 
-NavBar.propTypes = {
+AlbumNav.propTypes = {
   handleButtonClick: PropTypes.func.isRequired,
 };
 
-export default NavBar;
+export default AlbumNav;
