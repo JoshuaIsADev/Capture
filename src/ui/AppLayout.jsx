@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Main = styled.main`
   position: absolute;
-  top: 5rem;
+  top: 9rem;
   width: 100%;
   max-width: var(--container-width);
   transform: translateX(-50%);

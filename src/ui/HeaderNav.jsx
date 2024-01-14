@@ -3,25 +3,25 @@ import StyledNavLink from './StyledNavLink';
 import { SlPlus } from 'react-icons/sl';
 import { IconContext } from 'react-icons';
 
-const StyledHeaderNav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-`;
+// const StyledHeaderNav = styled.nav`
+//   display: flex;
+//   justify-content: space-between;
+// `;
 
 const NavList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 3rem;
+  padding-top: 1rem;
   align-items: center;
 `;
 
 function HeaderNav() {
   return (
-    <StyledHeaderNav>
-      <h3>Capture</h3>
+    <nav>
       <NavList>
         <li>
-          <StyledNavLink to='/album'>Album</StyledNavLink>
+          <StyledNavLink to='/albums'>Albums</StyledNavLink>
         </li>
         <li>
           <StyledNavLink to='/share' $variation='add'>
@@ -34,7 +34,7 @@ function HeaderNav() {
           <StyledNavLink to='/login'>Sign In</StyledNavLink>
         </li>
       </NavList>
-    </StyledHeaderNav>
+    </nav>
   );
 }
 

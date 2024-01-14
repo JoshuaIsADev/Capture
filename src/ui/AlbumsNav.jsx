@@ -11,7 +11,7 @@ const NavList = styled.ul`
   align-items: center;
 `;
 
-function AlbumNav({ handleButtonClick }) {
+function AlbumsNav({ handleButtonClick }) {
   return (
     <nav>
       <NavList>
@@ -29,8 +29,8 @@ function AlbumNav({ handleButtonClick }) {
   );
 }
 
-AlbumNav.propTypes = {
+AlbumsNav.propTypes = {
   handleButtonClick: PropTypes.func.isRequired,
 };
 
-export default AlbumNav;
+export default AlbumsNav;

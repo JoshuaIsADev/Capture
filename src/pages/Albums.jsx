@@ -1,16 +1,17 @@
 import styled from 'styled-components';
-import { useState } from 'react';
-import AlbumNav from '../ui/AlbumNav';
+import { useEffect, useState } from 'react';
+import AlbumsNav from '../ui/AlbumsNav';
+import { getAlbums } from '../services/apiAlbums';
 
-const StyledAlbum = styled.div`
+const StyledAlbums = styled.div`
   display: grid;
-  grid-template-columns: ${(props) => `repeat(${props.columns}, 1fr)`};
+  grid-template-columns: ${(props) => `repeat(${props.$columns}, 1fr)`};
   grid-template-rows: auto;
   width: 100%;
   gap: 2rem;
 `;
 
-function Album() {
+function Albums() {
   const isMobile = window.matchMedia(
     'only screen and (max-width: 500px)'
   ).matches;
@@ -51,10 +52,14 @@ function Album() {
     );
   };
 
+  useEffect(function () {
+    getAlbums().then((data) => console.log(data));
+  });
+
   return (
     <>
-      <AlbumNav handleButtonClick={handleButtonClick} />
-      <StyledAlbum columns={columns}>
+      <AlbumsNav handleButtonClick={handleButtonClick} />
+      <StyledAlbums $columns={columns}>
         <div>Album</div>
         <div>Album</div>
         <div>Album</div>
@@ -62,9 +67,9 @@ function Album() {
         <div>Album</div>
         <div>Album</div>
         <div>Album</div>
-      </StyledAlbum>
+      </StyledAlbums>
     </>
   );
 }
 
-export default Album;
+export default Albums;
