@@ -35,8 +35,6 @@ const StyledNavLink = styled(NavLink)`
     align-items: center;
     position: relative;
     color: var(--color-gray-900);
-    font-size: 1rem;
-    font-weight: 400;
     text-decoration: none;
     ${(props) => variations[props.$variation]}
   }
@@ -44,7 +42,7 @@ const StyledNavLink = styled(NavLink)`
   &:active,
   &.active:link,
   &.active:visited {
-    transition: all 0.2s;
+    transition: all 0.3s ease-in-out;
     color: var(--color-grey-900);
   }
 

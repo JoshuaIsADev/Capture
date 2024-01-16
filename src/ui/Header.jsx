@@ -9,11 +9,13 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: var(--container-width);
-  transform: translateX(-50%);
-  left: 50%;
-  padding: 0 3rem 1rem;
-  background-color: var(--color-grey-0);
+  /* max-width: var(--container-width); */
+  /* transform: translateX(-50%);
+  left: 50%; */
+  padding: 1rem;
+  margin: 0;
+  z-index: 100;
+  /* background-color: var(--color-grey-0); */
 `;
 
 function Header() {

@@ -1,30 +1,28 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import Input from './Input';
 
-const NavList = styled.ul`
+const StyledList = styled.ul`
   display: flex;
-  flex-direction: row;
-  justify-content: left;
-  width: 100%;
-  gap: 3rem;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: 5rem;
 `;
 
 function AlbumsNav({ handleButtonClick }) {
   return (
     <nav>
-      <NavList>
-        <li>
+      <StyledList>
+        {/* <li>
           <Button onClick={handleButtonClick}>View</Button>
-        </li>
+        </li> */}
         <li>
-          <Button>Sort</Button>
+          <Button>Sort &nbsp;&nbsp; Name</Button>
         </li>
-        <li>
-          <input type='input' placeholder='Search'></input>
-        </li>
-      </NavList>
+      </StyledList>
     </nav>
   );
 }

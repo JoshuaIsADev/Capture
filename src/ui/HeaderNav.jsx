@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import StyledNavLink from './StyledNavLink';
 import { SlPlus } from 'react-icons/sl';
 import { IconContext } from 'react-icons';
+import Button from './Button';
 
 // const StyledHeaderNav = styled.nav`
 //   display: flex;
@@ -12,8 +13,10 @@ const NavList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  padding-top: 1rem;
   align-items: center;
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 `;
 
 function HeaderNav() {
@@ -25,13 +28,14 @@ function HeaderNav() {
         </li>
         <li>
           <StyledNavLink to='/share' $variation='add'>
-            <IconContext.Provider value={{ size: '1.5rem' }}>
+            <Button $variation='add'>+</Button>
+            {/* <IconContext.Provider value={{ size: '1.5rem' }}>
               <SlPlus />
-            </IconContext.Provider>
+            </IconContext.Provider> */}
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/login'>Sign In</StyledNavLink>
+          <StyledNavLink to='/posts'>Posts</StyledNavLink>
         </li>
       </NavList>
     </nav>

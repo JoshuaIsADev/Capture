@@ -4,24 +4,23 @@ import Footer from './Footer';
 import styled from 'styled-components';
 
 const Main = styled.main`
-  position: absolute;
-  top: 9rem;
-  width: 100%;
-  max-width: var(--container-width);
-  transform: translateX(-50%);
-  left: 50%;
-  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100lvh;
+  padding: 100px 0rem 1rem 0rem;
+  /* height: 90lvh; */
 `;
 
 function AppLayout() {
   return (
-    <div>
+    <>
       <Header />
       <Main>
         <Outlet />
       </Main>
       <Footer />
-    </div>
+    </>
   );
 }
 

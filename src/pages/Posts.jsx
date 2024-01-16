@@ -1,4 +1,4 @@
-import AlbumCard from '../ui/AlbumCard';
+import AlbumCardEdit from '../ui/AlbumCardEdit';
 import { useQuery } from '@tanstack/react-query';
 import { getAlbums } from '../services/apiAlbums';
 import Spinner from '../ui/Spinner';
@@ -20,7 +20,7 @@ function Albums() {
     <>
       <StyledAlbums>
         {albums.map((album) => (
-          <AlbumCard album={album} key={album.id} />
+          <AlbumCardEdit album={album} key={album.id} />
         ))}
       </StyledAlbums>
     </>
