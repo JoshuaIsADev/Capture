@@ -21,7 +21,7 @@ function Post() {
 
   return (
     <>
-      <StyledAlbums>
+      <StyledAlbums $variation='post'>
         <AlbumCardPost album={albums[0]} key={albums[0].id} />
       </StyledAlbums>
     </>

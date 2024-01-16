@@ -54,7 +54,7 @@ li {
 }
 
 
-h1, h2, h3, h4, li, p {
+h1, h2, h3, h4, li {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -66,6 +66,8 @@ h2 {
 }
 
 p {
+  font-size: 1rem;
+  font-weight: 300;
   line-height:2rem;
 }
 

@@ -10,7 +10,7 @@ const variations = {
 const AlbumTextRow = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem 0rem;
+  padding: 2rem 0 0;
   gap: 1rem;
   ${(props) => variations[props.$variation]}
   @media (max-height: 600px) {

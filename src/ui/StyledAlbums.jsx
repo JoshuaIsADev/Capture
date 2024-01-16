@@ -4,15 +4,17 @@ const variations = {
   edit: css`
     gap: 4rem;
   `,
+  post: css`
+    gap: 0rem;
+  `,
 };
 
 const StyledAlbums = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: flex-end;
-  flex-wrap: nowrap;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6rem;
   ${(props) => variations[props.$variation]}/* height: 100%; */
 `;
 

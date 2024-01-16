@@ -7,8 +7,7 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100lvh;
-  padding: 100px 1rem 1rem 1rem;
+  padding: 100px 0 10rem 0;
   /* height: 90lvh; */
 `;
 

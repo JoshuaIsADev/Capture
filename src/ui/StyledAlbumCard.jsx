@@ -2,14 +2,16 @@ import styled, { css } from 'styled-components';
 
 const variations = {
   post: css`
-    grid-template-rows: 1fr 0px;
+    width: 100%;
+    padding: 0 0;
   `,
 };
 
 const StyledAlbumCard = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 150px;
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-grey-0);
+  padding: 0 1rem;
   ${(props) => variations[props.$variation]}
   @media (max-width: 450px) {
     /* margin-bottom: 3rem; */

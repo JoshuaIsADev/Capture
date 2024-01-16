@@ -4,16 +4,13 @@ import StyledAlbumCard from './StyledAlbumCard';
 import Img from './Img';
 import styled from 'styled-components';
 
-const AlbumInfoColumn = styled.div`
+const AlbumInfoRow = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  height: 100%;
-  min-width: 500px;
-  max-width: 500px;
+  align-self: flex-start;
+  width: 400px;
   gap: 1rem;
-  padding: 0 10rem 1rem 0;
+  padding: 0 1rem 8rem;
 `;
 
 const AlbumCommentColumn = styled.div`
@@ -28,20 +25,13 @@ const AlbumCommentColumn = styled.div`
   padding: 0 1rem 1rem 0;
 `;
 
-const AlbumCommentRow = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  gap: 1rem;
-`;
-
 function AlbumCardPost({ album }) {
   const { title, photographer, photos, paragraph } = album;
   // console.log(photos.length);
 
   return (
     <>
-      <AlbumInfoColumn>
+      <AlbumInfoRow>
         {/* <AlbumTextRow> */}
         <h1>{title}</h1>
         <h2>{photographer}</h2>
@@ -54,7 +44,7 @@ function AlbumCardPost({ album }) {
         <br />
         <p>{paragraph}</p>
         {/* </AlbumTextRow> */}
-      </AlbumInfoColumn>
+      </AlbumInfoRow>
       {photos.map((photo) => (
         <StyledAlbumCard $variation='post' key={photo.id}>
           <Img src={photo} $variation='post' />
