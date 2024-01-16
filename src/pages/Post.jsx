@@ -1,30 +1,31 @@
-import AlbumCardEdit from '../ui/AlbumCardEdit';
 import { useQuery } from '@tanstack/react-query';
 import { getAlbums } from '../services/apiAlbums';
 import Spinner from '../ui/Spinner';
 import StyledAlbums from '../ui/StyledAlbums';
+import AlbumCardPost from '../ui/AlbumCardPost';
 
-function Albums() {
+function Post() {
   const {
     isLoading,
     data: albums,
-    // error,
+    error,
   } = useQuery({
     queryKey: ['album'],
     queryFn: getAlbums,
   });
 
-  if (isLoading) return <Spinner />;
+  console.log(albums, error, isLoading);
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <>
       <StyledAlbums>
-        {albums.map((album) => (
-          <AlbumCardEdit album={album} key={album.id} />
-        ))}
+        <AlbumCardPost album={albums[0]} key={albums[0].id} />
       </StyledAlbums>
     </>
   );
 }
 
-export default Albums;
+export default Post;

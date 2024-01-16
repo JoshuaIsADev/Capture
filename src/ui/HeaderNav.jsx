@@ -35,7 +35,10 @@ function HeaderNav() {
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/posts'>Posts</StyledNavLink>
+          <StyledNavLink to='/post'>Post</StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to='/edit'>Edit</StyledNavLink>
         </li>
       </NavList>
     </nav>

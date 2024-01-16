@@ -1,4 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const variations = {
+  edit: css`
+    gap: 4rem;
+  `,
+};
 
 const StyledAlbums = styled.div`
   display: flex;
@@ -7,7 +13,7 @@ const StyledAlbums = styled.div`
   align-items: flex-end;
   flex-wrap: nowrap;
   gap: 1rem;
-  /* height: 100%; */
+  ${(props) => variations[props.$variation]}/* height: 100%; */
 `;
 
 export default StyledAlbums;

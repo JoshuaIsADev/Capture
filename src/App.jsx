@@ -1,14 +1,15 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Albums from './pages/Albums';
 import Account from './pages/Account';
-import Posts from './pages/Posts';
+import Post from './pages/Post';
 import Login from './pages/Login';
 import Share from './pages/Share';
 import PageNotFound from './pages/PageNotFound';
 import GlobalStyles from './styles/GlobalStyles';
 import AppLayout from './ui/AppLayout';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Edit from './pages/Edit';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -28,7 +29,8 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to='albums' />} />
             <Route path='albums' element={<Albums />} />
-            <Route path='posts' element={<Posts />} />
+            <Route path='post' element={<Post />} />
+            <Route path='edit' element={<Edit />} />
             <Route path='login' element={<Login />} />
             <Route path='share' element={<Share />} />
           </Route>

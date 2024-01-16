@@ -41,8 +41,6 @@ html, body {
   letter-spacing: .05rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100lvh;
-  overflow-y: hidden;
   overflow-x: visible;
 }
 
@@ -56,7 +54,7 @@ li {
 }
 
 
-h1, h2, h3, h4, li {
+h1, h2, h3, h4, li, p {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -68,9 +66,7 @@ h2 {
 }
 
 p {
-  font-size: 1rem;
-  font-weight: 300;
-  line-height:1rem;
+  line-height:2rem;
 }
 
 /* .summary-container {

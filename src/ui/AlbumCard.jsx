@@ -1,10 +1,11 @@
 import AlbumTextRow from './AlbumTextRow';
 import { SlHeart } from 'react-icons/sl';
-import { Img, StyledAlbumCard } from './StyledAlbumCard';
+import StyledAlbumCard from './StyledAlbumCard';
+import Img from './Img';
 
 function AlbumCard({ album }) {
   const { title, photographer, photos } = album;
-  console.log(photos.length);
+  // console.log(photos.length);
 
   return (
     <StyledAlbumCard>

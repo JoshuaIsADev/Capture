@@ -1,10 +1,10 @@
-import AlbumCard from '../ui/AlbumCard';
+import AlbumCardEdit from '../ui/AlbumCardEdit';
 import { useQuery } from '@tanstack/react-query';
 import { getAlbums } from '../services/apiAlbums';
 import Spinner from '../ui/Spinner';
 import StyledAlbums from '../ui/StyledAlbums';
 
-function Albums() {
+function Edit() {
   const {
     isLoading,
     data: albums,
@@ -20,13 +20,13 @@ function Albums() {
 
   return (
     <>
-      <StyledAlbums>
+      <StyledAlbums $variation='edit'>
         {albums.map((album) => (
-          <AlbumCard album={album} key={album.id} />
+          <AlbumCardEdit album={album} key={album.id} />
         ))}
       </StyledAlbums>
     </>
   );
 }
 
-export default Albums;
+export default Edit;
