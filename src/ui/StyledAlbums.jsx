@@ -15,7 +15,10 @@ const StyledAlbums = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 6rem;
-  ${(props) => variations[props.$variation]}/* height: 100%; */
+  ${(props) => variations[props.$variation]} /* height: 100%; */
+  @media (max-width: 600px) {
+    gap: 2rem;
+  }
 `;
 
 export default StyledAlbums;

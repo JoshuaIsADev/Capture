@@ -4,18 +4,11 @@ import styled, { css } from 'styled-components';
 const variations = {
   add: css`
     cursor: pointer;
-    color: var(--color-grey-900);
-    border: none;
-    border-radius: none;
-    background-color: var(--color-grey-0);
-    padding: 0;
     text-decoration: none;
     &:hover,
     &:active,
     &.active:link,
     &.active:visited {
-      color: var(--color-grey-300);
-      border: none;
       text-decoration: none;
     }
     &::after {

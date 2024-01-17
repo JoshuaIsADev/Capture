@@ -4,26 +4,37 @@ import StyledAlbumCard from './StyledAlbumCard';
 import Button from './Button';
 import styled from 'styled-components';
 import Img from './Img';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { deleteAlbum } from '../services/apiAlbums';
 
 const ImgContainer = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.25rem 0.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  /* flex-wrap: wrap; */
   width: 100%;
 `;
 
 function AlbumCardEdit({ album }) {
-  const { title, photographer, photos } = album;
-  console.log(photos.length);
+  const { id: albumId, title, photographer, photos } = album;
+  // console.log(photos.length);
+
+  const queryClient = useQueryClient();
+
+  const { isLoading: isDeleting, mutate } = useMutation({
+    mutationFn: (id) => deleteAlbum(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ['album'],
+      });
+    },
+  });
 
   return (
     <StyledAlbumCard>
       <ImgContainer>
-        {<Img src={photos[0]} $variation='edit' />}
-        {<Img src={photos[1]} $variation='edit' />}
-        {<Img src={photos[2]} $variation='edit' />}
-        {<Img src={photos[3]} $variation='edit' />}
-        {<Img src={photos[4]} $variation='edit' />}
+        {photos.map((photo) => (
+          <Img src={photo} $variation='edit' key={photo.id} />
+        ))}
       </ImgContainer>
       <AlbumTextRow $variation='edit'>
         <h1>
@@ -33,7 +44,11 @@ function AlbumCardEdit({ album }) {
         <Button $variation='edit'>
           <SlPencil />
         </Button>
-        <Button $variation='edit'>
+        <Button
+          $variation='edit'
+          onClick={() => mutate(albumId)}
+          disabled={isDeleting}
+        >
           <SlTrash />
         </Button>
       </AlbumTextRow>

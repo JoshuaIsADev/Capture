@@ -14,7 +14,7 @@ function Post() {
     queryFn: getAlbums,
   });
 
-  console.log(albums, error, isLoading);
+  // console.log(albums, error, isLoading);
   if (isLoading) {
     return <Spinner />;
   }

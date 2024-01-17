@@ -6,7 +6,8 @@ const variations = {
   `,
 
   edit: css`
-    height: 150px;
+    width: 100%;
+    /* height: auto; */
   `,
 
   post: css`

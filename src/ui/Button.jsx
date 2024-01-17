@@ -5,7 +5,7 @@ const variations = {
     color: var(--color-grey-900);
     border: 1px solid var(--color-grey-900);
     border-radius: 0rem;
-    background-color: var(--color-grey-0);
+    background-color: transparent;
     padding: 0.5rem 0.75rem;
     transition: 0.15s ease-in-out;
     &:hover {
