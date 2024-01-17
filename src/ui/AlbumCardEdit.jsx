@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Img from './Img';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { deleteAlbum } from '../services/apiAlbums';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ImgContainer = styled.div`
   display: grid;
@@ -23,17 +24,19 @@ function AlbumCardEdit({ album }) {
   const { isLoading: isDeleting, mutate } = useMutation({
     mutationFn: (id) => deleteAlbum(id),
     onSuccess: () => {
+      toast.success('Album successfully deleted');
       queryClient.invalidateQueries({
-        queryKey: ['album'],
+        queryKey: ['albums'],
       });
     },
+    onError: (err) => toast.error(err.message),
   });
 
   return (
     <StyledAlbumCard>
       <ImgContainer>
         {photos.map((photo) => (
-          <Img src={photo} $variation='edit' key={photo.id} />
+          <Img src={photo} $variation='edit' key={photo} />
         ))}
       </ImgContainer>
       <AlbumTextRow $variation='edit'>

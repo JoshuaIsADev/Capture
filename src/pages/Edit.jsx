@@ -10,7 +10,7 @@ function Edit() {
     data: albums,
     // error,
   } = useQuery({
-    queryKey: ['album'],
+    queryKey: ['albums'],
     queryFn: getAlbums,
   });
 
