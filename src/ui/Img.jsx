@@ -7,7 +7,6 @@ const variations = {
 
   edit: css`
     width: 100%;
-    /* height: auto; */
   `,
 
   post: css`

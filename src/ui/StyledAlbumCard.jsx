@@ -5,6 +5,11 @@ const variations = {
     width: 100%;
     padding: 0 0;
   `,
+  edit: css`
+    width: 100%;
+    max-width: var(--container-width-m);
+    padding: 0 0;
+  `,
 };
 
 const StyledAlbumCard = styled.div`
@@ -12,10 +17,9 @@ const StyledAlbumCard = styled.div`
   flex-direction: column;
   background-color: var(--color-grey-0);
   padding: 0;
-  ${(props) => variations[props.$variation]}
-  @media (max-width: 450px) {
-    /* margin-bottom: 3rem; */
-  }
+  ${(props) => variations[props.$variation]}/* @media (max-width: 450px) {
+    margin-bottom: 3rem;
+  } */
 `;
 
 export default StyledAlbumCard;

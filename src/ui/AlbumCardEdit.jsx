@@ -10,9 +10,12 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const ImgContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   /* flex-wrap: wrap; */
-  width: 100%;
+  /* grid-auto-flow: column; */
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 `;
 
 function AlbumCardEdit({ album }) {
@@ -33,7 +36,7 @@ function AlbumCardEdit({ album }) {
   });
 
   return (
-    <StyledAlbumCard>
+    <StyledAlbumCard $variation='edit'>
       <ImgContainer>
         {photos.map((photo) => (
           <Img src={photo} $variation='edit' key={photo} />

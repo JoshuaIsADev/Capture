@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
   --border-radius-md: 1rem;
   --border-radius-lg: 2rem;
 
-  --container-width: 1920px;
+  --container-width-m: 820px;
   /* --container-width-small: 450px; */
 }
 
@@ -54,11 +54,15 @@ li {
 }
 
 
-h1, h2, h3, h4, li {
+h1, h2, h3, h4, li, label {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: .1rem;
+}
+
+textarea {
+  font-family: 'Inter Tight', sans-serif;
 }
 
 h2 {

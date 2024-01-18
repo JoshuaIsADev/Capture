@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 
-const Input = styled.input`
+const TextArea = styled.textarea`
   border: none;
-  /* border-bottom: 1px solid var(--color-grey-100); */
   border: 1px solid var(--color-grey-900);
   background-color: var(--color-background);
   border-radius: none;
   padding: 2rem 1rem;
   width: 100%;
-  text-transform: uppercase;
   letter-spacing: 0.1rem;
   margin-top: 0.2rem;
+  resize: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 `;
 
-export default Input;
+export default TextArea;
