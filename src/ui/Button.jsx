@@ -15,15 +15,19 @@ const variations = {
   edit: css`
     color: var(--color-grey-900);
     border: none;
+
+    border-top: 1px solid var(--color-grey-900);
+    border-right: 1px solid var(--color-grey-900);
+    width: 100%;
     border-radius: 0rem;
-    background-color: var(--color-grey-0);
-    padding: 0.5rem 0.5rem 0.2rem;
+    background-color: transparent;
+    padding: 1rem;
     transition: 0.15s ease-in-out;
     font-size: 1rem;
     font-weight: 300;
     &:hover {
-      border-radius: 0.75rem;
-      color: var(--color-grey-300);
+      border-radius: none;
+      color: var(--color-grey-200);
     }
   `,
 };

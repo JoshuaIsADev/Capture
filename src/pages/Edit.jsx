@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getAlbums } from '../services/apiAlbums';
 import Spinner from '../ui/Spinner';
 import StyledAlbums from '../ui/StyledAlbums';
+import { FormHeader, Form, FormRow } from '../ui/Form';
 
 function Edit() {
   const {
@@ -21,6 +22,12 @@ function Edit() {
   return (
     <>
       <StyledAlbums $variation='edit'>
+        <FormHeader>
+          <FormRow>
+            <h1>Share</h1>
+          </FormRow>
+        </FormHeader>
+
         {albums.map((album) => (
           <AlbumCardEdit album={album} key={album.id} />
         ))}

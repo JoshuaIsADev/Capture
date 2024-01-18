@@ -1,26 +1,8 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import StyledAlbums from '../ui/StyledAlbums';
 import Input from '../ui/Input';
 import TextArea from '../ui/TextArea';
-
-const FormHeader = styled.div`
-  max-width: var(--container-width-m);
-  width: 100%;
-  margin: 0rem 1rem;
-  border: 1px solid var(--color-grey-900);
-  padding: 2rem 1rem;
-`;
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  max-width: var(--container-width-m);
-  width: 100%;
-  gap: 1rem;
-`;
-
-const FormRow = styled.div`
-  width: 100%;
-`;
+import { FormHeader, Form, FormRow } from '../ui/Form';
 
 function Share() {
   return (

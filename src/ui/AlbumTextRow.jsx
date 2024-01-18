@@ -4,7 +4,7 @@ const variations = {
   edit: css`
     flex-direction: row;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
     gap: 1rem;
   `,
 };
